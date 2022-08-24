@@ -122,6 +122,18 @@ a {
 }
 
 @media (min-width: 600px) {
+  .card {
+    width: 350px;
+  }
+
+  .image > img:not(.icon) {
+    width: 302px;
+  }
+
+  .overlay {
+    width: 302px;
+  }
+
   .image:hover .overlay {
     opacity: 0.5;
   }
