@@ -24,10 +24,11 @@ main {
 }
 
 .image {
-  position: absolute;
+  position: relative;
+  border-radius: 8px;
 }
 
-.image img {
+.image > img:not(.icon) {
   width: 278px;
   border-radius: 8px;
 }
@@ -38,6 +39,7 @@ main {
   background-color: #00fff8;
   opacity: 0;
   border-radius: 8px;
+  transition: all 500ms;
 
   position: absolute;
   top: 0;
@@ -51,16 +53,20 @@ main {
   left: 117px;
 
   opacity: 0;
+  transition: all 500ms;
 }
 
 h1 {
-  margin: 302px 0 12px;
+  margin: 24px 0 12px;
   font-weight: 600;
   font-size: 22px;
   line-height: 28px;
   color: #fff;
 }
 
+a {
+  transition: all 500ms;
+}
 .card > p {
   font-weight: 300;
   font-size: 18px;
@@ -113,4 +119,18 @@ h1 {
 
 .creator a {
   color: #fff;
+}
+
+@media (min-width: 600px) {
+  .image:hover .overlay {
+    opacity: 0.5;
+  }
+
+  .image:hover .icon {
+    opacity: 1;
+  }
+
+  a:hover {
+    color: #00fff8;
+  }
 }
